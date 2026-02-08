@@ -1,0 +1,700 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Form Pendaftaran | 901 ENHYPEN</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      @keyframes gradientShift {
+        0% {
+          background-position: 0% 50%;
+        }
+        50% {
+          background-position: 100% 50%;
+        }
+        100% {
+          background-position: 0% 50%;
+        }
+      }
+      .animate-gradient {
+        background-size: 300% 300%;
+        animation: gradientShift 5s ease infinite;
+      }
+      @keyframes posterAnim {
+        0%,
+        100% {
+          transform: scale(1) rotate(0deg);
+          filter: drop-shadow(0 0 20px rgba(255, 255, 255, 0.3));
+        }
+        50% {
+          transform: scale(1.03) rotate(1deg);
+          filter: drop-shadow(0 0 30px rgba(255, 255, 255, 0.5));
+        }
+      }
+      .animate-poster {
+        animation: posterAnim 6s ease-in-out infinite;
+      }
+      @keyframes logoSpin {
+        0% {
+          transform: rotate(0deg);
+          filter: drop-shadow(0 0 20px rgba(0, 255, 255, 0.6));
+        }
+        100% {
+          transform: rotate(360deg);
+          filter: drop-shadow(0 0 30px rgba(0, 255, 255, 0.7));
+        }
+      }
+      .animate-logo {
+        animation: logoSpin 20s linear infinite;
+      }
+      @keyframes formCardAnim {
+        0%,
+        100% {
+          transform: scale(1);
+          box-shadow:
+            0 10px 25px rgba(255, 255, 255, 0.1),
+            0 0 0 rgba(255, 255, 255, 0);
+        }
+        50% {
+          transform: scale(1.02);
+          box-shadow:
+            0 15px 40px rgba(255, 255, 255, 0.2),
+            0 0 20px rgba(255, 255, 255, 0.2);
+        }
+      }
+      .animate-formCard {
+        animation: formCardAnim 6s ease-in-out infinite;
+      }
+      @keyframes loaderSpin {
+        0% {
+          transform: rotate(0deg) scale(1);
+        }
+        50% {
+          transform: rotate(180deg) scale(1.08);
+        }
+        100% {
+          transform: rotate(360deg) scale(1);
+        }
+      }
+
+      .animate-loaderLogo {
+        animation: loaderSpin 1.4s linear infinite;
+        will-change: transform;
+      }
+    </style>
+  </head>
+  <body
+    class="min-h-screen bg-gradient-to-br from-blue-600 via-indigo-600 to-purple-700 p-4"
+  >
+    <!-- LOADER -->
+    <div
+      id="pageLoader"
+      class="fixed inset-0 z-[9999] flex flex-col items-center justify-center bg-gradient-to-br from-blue-700 via-indigo-700 to-purple-800"
+    >
+      <img
+        src="img/logos.png"
+        alt="901 ENHYPEN"
+        class="w-24 md:w-28 animate-loaderLogo drop-shadow-[0_0_30px_rgba(0,255,255,0.8)]"
+      />
+
+      <p
+        class="mt-4 text-white text-sm md:text-base tracking-widest animate-pulse"
+      >
+        LOADING 901 ENHYPEN...
+      </p>
+    </div>
+
+    <!-- WRAPPER -->
+    <div
+      class="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-6 items-start"
+    >
+      <!-- POSTER (KIRI) -->
+      <div class="flex justify-center lg:sticky lg:top-6">
+        <img
+          src="img/poster.jpeg"
+          alt="Open Member Enhypen"
+          class="rounded-2xl shadow-2xl max-h-[90vh] w-auto object-contain animate-poster"
+        />
+      </div>
+      <!-- FORM (KANAN) -->
+      <div
+        class="w-full bg-gradient-to-br from-purple-700/70 via-purple-600/70 to-indigo-700/70 backdrop-blur-lg rounded-2xl shadow-2xl p-8 text-white animate-formCard"
+      >
+        <!-- LOGO -->
+        <div class="flex justify-center mb-4">
+          <img
+            src="/public/img/logos1.png"
+            alt="901 Enhypen Logo"
+            class="w-28 md:w-32 drop-shadow-[0_0_20px_rgba(0,255,255,0.6)] animate-logo"
+          />
+        </div>
+        <!-- JUDUL -->
+        <h1 class="text-3xl font-bold text-center mb-6 tracking-wide">
+          FORM PENDAFTARAN
+          <span
+            class="block text-transparent bg-clip-text bg-gradient-to-r from-pink-500 via-purple-500 to-cyan-400 animate-gradient"
+          >
+            901 ENHYPEN
+          </span>
+        </h1>
+        <!-- ALERT INFO FORM -->
+        <div
+          class="mb-6 p-4 rounded-xl border border-pink-400/40 bg-gradient-to-br from-pink-500/10 to-purple-500/10 backdrop-blur text-sm text-white"
+        >
+          <div class="flex items-start gap-3">
+            <i
+              class="fas fa-circle-exclamation text-pink-400 text-xl mt-0.5"
+            ></i>
+            <div class="space-y-2">
+              <p class="font-semibold text-pink-300">
+                Harap diperhatikan sebelum mengisi form:
+              </p>
+              <ul class="list-disc list-inside space-y-1 opacity-90">
+                <li>Semua kolom bertanda <b>[WAJIB diisi]</b>.</li>
+                <li>Pastikan data yang dimasukkan <b>benar & sesuai</b>.</li>
+                <li>Nomor WhatsApp yang dicantumkan harus <b>aktif</b>.</li>
+
+                <li>
+                  Jika sudah mendaftar namun belum ada yang menghubungi, silakan
+                  hubungi melalui kontak resmi berikut:
+
+                  <div class="mt-3 grid grid-cols-1 sm:grid-cols-2 gap-3">
+                    <!-- WhatsApp Card -->
+                    <a
+                      href="https://wa.me/6285871194844"
+                      target="_blank"
+                      class="group flex items-center gap-3 p-3 rounded-lg bg-green-500/10 border border-green-400/30 hover:bg-green-500/20 transition"
+                    >
+                      <div
+                        class="w-10 h-10 flex items-center justify-center rounded-full bg-green-500/20 text-green-400 group-hover:scale-110 transition"
+                      >
+                        <i class="fab fa-whatsapp text-xl"></i>
+                      </div>
+
+                      <div class="leading-tight">
+                        <p class="font-semibold text-green-300">
+                          WhatsApp Resmi
+                        </p>
+                        <p class="text-xs opacity-70">Fast Response Admin</p>
+                      </div>
+                    </a>
+
+                    <!-- TikTok Card -->
+                    <a
+                      href="https://www.tiktok.com/@901enhypen.ofc"
+                      target="_blank"
+                      class="group flex items-center gap-3 p-3 rounded-lg bg-cyan-500/10 border border-cyan-400/30 hover:bg-cyan-500/20 transition"
+                    >
+                      <div
+                        class="w-10 h-10 flex items-center justify-center rounded-full bg-cyan-500/20 text-cyan-400 group-hover:scale-110 transition"
+                      >
+                        <i class="fab fa-tiktok text-xl"></i>
+                      </div>
+
+                      <div class="leading-tight">
+                        <p class="font-semibold text-cyan-300">
+                          TikTok Official
+                        </p>
+                        <p class="text-xs opacity-70">DM jika WA tidak aktif</p>
+                      </div>
+                    </a>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <form id="joinForm" enctype="multipart/form-data">
+          <!-- Nama -->
+          <div>
+            <label class="block mb-1">Nama *</label>
+            <input
+              type="text"
+              name="nama"
+              required
+              placeholder="Masukkan nama"
+              class="w-full px-4 py-2 rounded-lg bg-black/30 border border-white/20 text-white placeholder-white/60 focus:ring-2 focus:ring-pink-400"
+            />
+          </div>
+          <!-- Umur -->
+          <div>
+            <label class="block mb-1">Umur *</label>
+            <input
+              type="number"
+              name="umur"
+              required
+              placeholder="Masukkan umur"
+              class="w-full px-4 py-2 rounded-lg bg-black/30 border border-white/20 text-white placeholder-white/60 focus:ring-2 focus:ring-pink-400"
+            />
+          </div>
+          <!-- Gender -->
+          <div>
+            <label class="block mb-1">Gender *</label>
+            <div class="flex gap-6">
+              <label class="flex items-center gap-2">
+                <input
+                  type="radio"
+                  name="gender"
+                  value="Lelaki"
+                  required
+                  class="accent-pink-500"
+                />
+                Lelaki
+              </label>
+              <label class="flex items-center gap-2">
+                <input
+                  type="radio"
+                  name="gender"
+                  value="Perempuan"
+                  class="accent-pink-500"
+                />
+                Perempuan
+              </label>
+            </div>
+          </div>
+          <!-- Asal Kota -->
+          <div>
+            <label class="block mb-1">Asal Kota *</label>
+            <input
+              type="text"
+              name="kota"
+              required
+              placeholder="Contoh: Jakarta"
+              class="w-full px-4 py-2 rounded-lg bg-black/30 border border-white/20 text-white placeholder-white/60 focus:ring-2 focus:ring-purple-400"
+            />
+          </div>
+          <!-- Tujuan -->
+          <div>
+            <label class="block mb-1">Tujuan Join *</label>
+            <textarea
+              name="tujuan"
+              required
+              placeholder="Ceritakan tujuan kamu join"
+              class="w-full px-4 py-2 rounded-lg bg-black/30 border border-white/20 text-white placeholder-white/60 focus:ring-2 focus:ring-purple-400"
+            ></textarea>
+          </div>
+          <!-- Divisi -->
+          <div>
+            <label class="block mb-1">Ingin Join Divisi *</label>
+            <div class="flex gap-6">
+              <label class="flex items-center gap-2">
+                <input
+                  type="checkbox"
+                  name="divisi[]"
+                  value="MLBB"
+                  class="accent-indigo-500"
+                />
+                MLBB
+              </label>
+              <label class="flex items-center gap-2">
+                <input
+                  type="checkbox"
+                  name="divisi[]"
+                  value="ROBLOX"
+                  class="accent-indigo-500"
+                />
+                ROBLOX
+              </label>
+            </div>
+          </div>
+          <!-- WhatsApp -->
+          <div>
+            <label class="block mb-1">Nomor WhatsApp *</label>
+            <input
+              type="tel"
+              name="whatsapp"
+              required
+              placeholder="08xxxxxxxxxx"
+              class="w-full px-4 py-2 rounded-lg bg-black/30 border border-white/20 text-white placeholder-white/60 focus:ring-2 focus:ring-green-400"
+            />
+          </div>
+          <!-- TikTok -->
+          <div>
+            <label class="block mb-1">Username TikTok *</label>
+            <input
+              type="text"
+              name="tiktok"
+              required
+              placeholder="@username"
+              class="w-full px-4 py-2 rounded-lg bg-black/30 border border-white/20 text-white placeholder-white/60 focus:ring-2 focus:ring-cyan-400"
+            />
+          </div>
+          <!-- FOTO MUKA -->
+          <div>
+            <label class="block mb-1">Photo Muka *</label>
+            <label
+              class="flex justify-between items-center px-4 py-3 rounded-lg bg-black/30 border border-white/20 cursor-pointer hover:border-pink-400"
+            >
+              <span id="fotoText" class="opacity-80 text-sm"
+                >Pilih foto muka</span
+              >
+              <span class="bg-pink-500 px-3 py-1 rounded-full text-xs"
+                >Upload</span
+              >
+              <input
+                id="fotoInput"
+                name="foto"
+                type="file"
+                accept="image/*"
+                required
+                class="hidden"
+                onchange="
+                  handlePreview(
+                    this,
+                    'fotoPreview',
+                    'fotoText',
+                    'fotoPreviewBox',
+                  )
+                "
+              />
+            </label>
+            <div id="fotoPreviewBox" class="relative mt-3 hidden">
+              <img id="fotoPreview" class="rounded-lg max-h-40" />
+              <div class="absolute top-2 right-2 flex gap-2">
+                <button
+                  type="button"
+                  onclick="editFile('fotoInput')"
+                  class="bg-blue-500 px-2 py-1 text-xs rounded"
+                >
+                  Edit
+                </button>
+                <button
+                  type="button"
+                  onclick="
+                    removeFile('fotoInput', 'fotoPreviewBox', 'fotoText')
+                  "
+                  class="bg-red-500 px-2 py-1 text-xs rounded"
+                >
+                  ✕
+                </button>
+              </div>
+            </div>
+          </div>
+          <!-- SCREENSHOT TIKTOK -->
+          <div>
+            <label class="block mb-1">Screenshot TikTok *</label>
+            <label
+              class="flex justify-between items-center px-4 py-3 rounded-lg bg-black/30 border border-white/20 cursor-pointer hover:border-purple-400"
+            >
+              <span id="ssText" class="opacity-80 text-sm"
+                >Pilih screenshot TikTok</span
+              >
+              <span class="bg-purple-500 px-3 py-1 rounded-full text-xs"
+                >Upload</span
+              >
+              <input
+                id="ssInput"
+                name="ss"
+                type="file"
+                accept="image/*"
+                required
+                class="hidden"
+                onchange="
+                  handlePreview(this, 'ssPreview', 'ssText', 'ssPreviewBox')
+                "
+              />
+            </label>
+            <div id="ssPreviewBox" class="relative mt-3 hidden">
+              <img id="ssPreview" class="rounded-lg max-h-40" />
+              <div class="absolute top-2 right-2 flex gap-2">
+                <button
+                  type="button"
+                  onclick="editFile('ssInput')"
+                  class="bg-blue-500 px-2 py-1 text-xs rounded"
+                >
+                  Edit
+                </button>
+                <button
+                  type="button"
+                  onclick="removeFile('ssInput', 'ssPreviewBox', 'ssText')"
+                  class="bg-red-500 px-2 py-1 text-xs rounded"
+                >
+                  ✕
+                </button>
+              </div>
+            </div>
+          </div>
+          <!-- SUBMIT -->
+          <button
+            type="submit"
+            class="w-full mt-4 py-3 rounded-xl bg-gradient-to-r from-pink-500 to-purple-500 font-bold hover:scale-105 transition"
+          >
+            DAFTAR SEKARANG
+          </button>
+        </form>
+      </div>
+    </div>
+    <!-- FOOTER -->
+    <footer
+      class="mt-12 bg-white/10 backdrop-blur-lg rounded-2xl shadow-2xl p-6 text-center text-white"
+    >
+      <div class="max-w-6xl mx-auto space-y-6">
+        <!-- Owner / Founder -->
+        <div
+          class="mx-auto max-w-md bg-white/5 rounded-xl p-4 border border-white/10"
+        >
+          <p class="text-sm uppercase tracking-widest text-indigo-300">
+            AKUN OWNER
+          </p>
+
+          <div class="flex justify-center mt-2">
+            <img
+              src="img/logos.png"
+              alt="901 Enhypen Logo"
+              class="w-16 md:w-20 drop-shadow-[0_0_15px_rgba(0,180,255,0.6)]"
+            />
+          </div>
+
+          <h3 class="text-lg font-semibold text-white mt-2">
+            901 ENHYPEN OWNER
+          </h3>
+
+          <p class="text-sm opacity-80 mt-1">Owner resmi Squad 901 ENHYPEN</p>
+
+          <!-- Owner Social ICON -->
+          <div class="flex justify-center gap-5 mt-4 text-xl">
+            <button
+              onclick="openOwnerIG()"
+              class="p-3 rounded-full bg-white/10 hover:bg-indigo-500/30 hover:scale-110 transition duration-300"
+            >
+              <i class="fab fa-instagram"></i>
+            </button>
+
+            <button
+              onclick="openOwnerTT()"
+              class="p-3 rounded-full bg-white/10 hover:bg-cyan-500/30 hover:scale-110 transition duration-300"
+            >
+              <i class="fab fa-tiktok"></i>
+            </button>
+          </div>
+        </div>
+
+        <!-- Info -->
+        <p class="text-sm md:text-base opacity-70">
+          &copy; 2026 901 ENHYPEN. All Rights Reserved.
+        </p>
+
+        <!-- Community Social ICON -->
+        <div class="flex justify-center gap-6 text-2xl mt-2">
+          <!-- TikTok -->
+          <button
+            onclick="openCommunityTT()"
+            class="p-3 rounded-full bg-white/10 hover:bg-cyan-500/30 hover:scale-110 transition duration-300"
+          >
+            <i class="fab fa-tiktok"></i>
+          </button>
+
+          <!-- Discord -->
+          <button
+            onclick="openCommunityDiscord()"
+            class="p-3 rounded-full bg-white/10 hover:bg-purple-500/30 hover:scale-110 transition duration-300"
+          >
+            <i class="fab fa-discord"></i>
+          </button>
+        </div>
+      </div>
+    </footer>
+
+    <!-- SweetAlert2 -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    <script>
+      function openCommunityTT() {
+        Swal.fire({
+          title: "TikTok Community",
+          html: `
+        <div class="flex flex-col items-center gap-3">
+          <i class="fab fa-tiktok text-5xl text-cyan-400"></i>
+          <p>Buka akun TikTok resmi <b>901 ENHYPEN</b>?</p>
+        </div>
+      `,
+          showCancelButton: true,
+          confirmButtonText: "Buka TikTok",
+          cancelButtonText: "Batal",
+          confirmButtonColor: "#06b6d4",
+          background: "#0f172a",
+          color: "#ffffff",
+        }).then((result) => {
+          if (result.isConfirmed) {
+            window.open("https://www.tiktok.com/@901enhypen.ofc", "_blank");
+          }
+        });
+      }
+
+      function openCommunityDiscord() {
+        Swal.fire({
+          title: "Discord Community",
+          html: `
+        <div class="flex flex-col items-center gap-3">
+          <i class="fab fa-discord text-5xl text-purple-400"></i>
+          <p>Gabung ke server Discord <b>901 ENHYPEN</b>?</p>
+        </div>
+      `,
+          showCancelButton: true,
+          confirmButtonText: "Gabung Discord",
+          cancelButtonText: "Batal",
+          confirmButtonColor: "#8b5cf6",
+          background: "#0f172a",
+          color: "#ffffff",
+        }).then((result) => {
+          if (result.isConfirmed) {
+            window.open("https://discord.gg/901enhypen", "_blank");
+          }
+        });
+      }
+    </script>
+
+    <script>
+      function openOwnerIG() {
+        Swal.fire({
+          title: "Instagram Owner",
+          html: `
+        <div style="display:flex;justify-content:center;margin-bottom:12px;">
+          <i class="fab fa-instagram"
+             style="font-size:64px;color:#e1306c;"></i>
+        </div>
+        <p>Buka akun Instagram Owner 901 ENHYPEN?</p>
+      `,
+          showCancelButton: true,
+          confirmButtonText: "Buka",
+          cancelButtonText: "Batal",
+          confirmButtonColor: "#6366f1",
+          background: "#0f172a",
+          color: "#ffffff",
+        }).then((result) => {
+          if (result.isConfirmed) {
+            window.open(
+              "https://www.instagram.com/nona.mputt?igsh=aGZpOHVrODFlbWQ4&utm_source=qr",
+              "_blank",
+            );
+          }
+        });
+      }
+
+      function openOwnerTT() {
+        Swal.fire({
+          title: "TikTok Owner",
+          html: `
+        <div style="display:flex;justify-content:center;margin-bottom:12px;">
+          <i class="fab fa-tiktok"
+             style="font-size:64px;color:#25f4ee;"></i>
+        </div>
+        <p>Buka akun TikTok Owner 901 ENHYPEN?</p>
+      `,
+          showCancelButton: true,
+          confirmButtonText: "Buka",
+          cancelButtonText: "Batal",
+          confirmButtonColor: "#06b6d4",
+          background: "#0f172a",
+          color: "#ffffff",
+        }).then((result) => {
+          if (result.isConfirmed) {
+            window.open(
+              "https://www.tiktok.com/@mputt.disini?_r=1&_t=ZS-93aTCFMlsVk",
+              "_blank",
+            );
+          }
+        });
+      }
+    </script>
+
+    <script>
+      const form = document.getElementById("joinForm");
+
+      form.addEventListener("submit", async (e) => {
+        e.preventDefault();
+        const formData = new FormData(form);
+
+        Swal.fire({
+          title: "Mengirim Data...",
+          text: "Mohon tunggu sebentar",
+          allowOutsideClick: false,
+          background: "#0f172a",
+          color: "#ffffff",
+          didOpen: () => Swal.showLoading(),
+        });
+
+        try {
+          const res = await fetch("http://154.47.146.246:3001/submit", {
+            method: "POST",
+            body: formData,
+          });
+
+          const data = await res.json();
+
+          if (data.status === "ok") {
+            Swal.fire({
+              icon: "success",
+              title: "Pendaftaran Berhasil 🎉",
+              text: "Data kamu sudah dikirim ke admin 901 ENHYPEN",
+              confirmButtonColor: "#ec4899",
+              background: "#0f172a",
+              color: "#ffffff",
+            });
+
+            form.reset();
+            document.getElementById("fotoPreviewBox").classList.add("hidden");
+            document.getElementById("ssPreviewBox").classList.add("hidden");
+            document.getElementById("fotoText").textContent = "Pilih foto muka";
+            document.getElementById("ssText").textContent =
+              "Pilih screenshot TikTok";
+          } else {
+            throw new Error("Server error");
+          }
+        } catch (err) {
+          Swal.fire({
+            icon: "error",
+            title: "Gagal ❌",
+            text: "Server tidak terhubung",
+            background: "#0f172a",
+            color: "#ffffff",
+          });
+        }
+      });
+    </script>
+
+    <script>
+      function handlePreview(input, previewId, textId, boxId) {
+        const file = input.files[0];
+        if (!file) return;
+
+        const reader = new FileReader();
+        reader.onload = function (e) {
+          document.getElementById(previewId).src = e.target.result;
+          document.getElementById(boxId).classList.remove("hidden");
+          document.getElementById(textId).textContent = file.name;
+        };
+        reader.readAsDataURL(file);
+      }
+
+      function removeFile(inputId, boxId, textId) {
+        const input = document.getElementById(inputId);
+        input.value = "";
+        document.getElementById(boxId).classList.add("hidden");
+        document.getElementById(textId).textContent =
+          inputId === "fotoInput"
+            ? "Pilih foto muka"
+            : "Pilih screenshot TikTok";
+      }
+
+      function editFile(inputId) {
+        document.getElementById(inputId).click();
+      }
+    </script>
+
+    <script>
+      window.addEventListener("load", () => {
+        const loader = document.getElementById("pageLoader");
+        loader.style.opacity = "0";
+        setTimeout(() => {
+          loader.style.display = "none";
+        }, 400);
+      });
+    </script>
+  </body>
+</html>
